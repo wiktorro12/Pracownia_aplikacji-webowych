@@ -8,6 +8,13 @@
 <body>
     <script>
         /*
+            Zasady:
+            *DRY - don't repeat yourself
+            *KISS - keept it simple
+            *YAGNI - you aren't gonna need it
+            *SOLID
+        */
+        /*
         operatory porównania
         > - większe
         < - mniejsze
@@ -17,6 +24,18 @@
         === - równe muszą być równe typy
         != - różne
         !== - różne ale te same typy
+
+        Operatory logiczne:
+        && - and
+        || - or
+        ! - not
+
+            a b     a && b      a || b      !a
+            F F         F           F       T
+            F T         F           T       T
+            T F         F           T       F
+            T T         T           T       F
+
         */
         //pobierz od użytkownika liczbę
         // i wyświetl czy jest ona dodatnia czy ujemna
@@ -39,7 +58,86 @@
             else
                 document.writeln("Liczba jest ujemna <br/>");    
         }
-        task1();
+        
+        //napisz program 
+        //który wyświetli informacje czy liczba jest parzysta czy nieparzysta
+        function task2()
+        {
+            var numberFromUser = 89;
+
+            var rest = numberFromUser % 2;
+
+            if (rest == 0)
+                document.write("liczba parzysta<br/>");
+                else    
+                document.write("liczba nieparzysta<br/>");
+        }
+        
+        //Napisz program, który wyświetli informacje
+        // czy liczba jest z zakresu <1 ; 10)
+        function task3()
+        {
+            var number = 78
+
+            //wersja1
+            if(number >= 1)
+            {
+                if (number < 10)
+                    document.writeln("liczba jest z przedziału<br/>");
+                else
+                    document.writeln("liczba nie jest z przedziału<br/>");
+            }
+            else
+            document.writeln("liczba nie jest z przedziału<br/>");
+
+        }
+        function task4()
+        {
+            var number = 78
+
+            //wersja 2
+            if(number >= 1)
+            
+                if (number < 10)
+                    document.writeln("liczba jest z przedziału<br/>");
+                else
+                    document.writeln("liczba nie jest z przedziału<br/>");
+            
+            else
+            document.writeln("liczba nie jest z przedziału<br/>");
+
+        }
+
+        function task5()
+        {
+            var number = 78
+
+            //wersja 3
+            if(number >= 1 && number < 10)
+                    document.writeln("liczba jest z przedziału<br/>");
+            else
+                document.writeln("liczba nie jest z przedziału<br/>");
+
+        }
+
+        function task6()
+        {
+            var number = 78
+
+            //wersja 4
+            if(number < 1 || number >= 10)
+                    document.writeln("liczba jest z przedziału<br/>");
+            else
+                document.writeln("liczba nie jest z przedziału<br/>");
+
+        }
+        //task1();
+        //task2();
+        //task3();
+        //task4();
+        //task5();
+        task6();
+        
 
         
     </script>
