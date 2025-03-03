@@ -37,6 +37,39 @@
             T T         T           T       F
 
         */
+       /*
+        *. 
+        *. 
+        *. 
+        *. 
+        *. 
+        *. Napisz program, który poprosi użytkownika o podanie dwóch liczb całkowitych i wyświetli większą z nich.
+        *. Napisz program, który poprosi użytkownika o podanie roku i sprawdzi, czy jest to rok przestępny. Wyświetl odpowiedni komunikat.
+        *. Napisz program, który poprosi użytkownika o podanie liczby całkowitej i sprawdzi, czy jest ona podzielna zarówno przez 3, jak i przez 5. Wyświetl odpowiedni komunikat.
+
+        *. Napisz program, który poprosi użytkownika o podanie masy ciała (w kilogramach) i wzrostu (w metrach).
+        Na  podstawie tych danych oblicz wskaźnik BMI (Body Mass Index) i wyświetl odpowiedni komunikat informujący o stanie zdrowia.
+        poniżej 16 - wygłodzenie
+        16 - 16.99 - wychudzenie
+        17 - 18.49 - niedowagę
+        18.5 - 24.99 - wagę prawidłową
+        25.0 - 29.9 - nadwagę
+        30.0 - 34.99 - I stopień otyłości
+        35.0 - 39.99 - II stopień otyłości
+        powyżej 40.0 - otyłość skrajną
+
+        Wzór:
+
+        BMI = masa/wysokość^2
+
+        *. Napisz program, który poprosi użytkownika o podanie długości trzech odcinków i sprawdzi, czy można zbudować z nich trójkąt. Wyświetl odpowiedni komunikat.
+        *. Napisz program, który poprosi użytkownika o podanie liczby dodatniej i obliczy jej pierwiastek kwadratowy, jeśli jest to możliwe. Wyświetl wynik lub odpowiedni komunikat, jeśli liczba jest ujemna.
+        *. Program sprawdzający czy podana data jest poprawna (np. sprawdzając, czy dzień jest z zakresu od 1 do 31, miesiąc od 1 do 12 itd.)
+
+        */
+
+
+
         //pobierz od użytkownika liczbę
         // i wyświetl czy jest ona dodatnia czy ujemna
         function task1()
@@ -131,14 +164,115 @@
                 document.writeln("liczba nie jest z przedziału<br/>");
 
         }
+        //Napisz program, który wykona dzielenie dwóch liczb
+        function task7()
+        {
+            var firstNumber, secondNumber, results;
+
+            firstNumber=1;
+            secondNumber=0;
+
+            if(firstNumber == 0)
+                document.writeln("nie dziel przez zero");
+            else
+            {
+                results = secondNumber / firstNumber;
+
+                document.write("wynik dzielenia: " + results + "<br/>" );
+            }
+
+            
+            
+            
+
+        }
+        //Napisz program, który poprosi użytkownika o podanie dwóch liczb całkowitych i sprawdzi, czy są one równe. Wyświetl odpowiedni komunikat.
+        function task8()
+        {
+            var firstNumber, secondNumber
+            firstNumber = 1;
+            secondNumber = 2;
+
+            if(firstNumber == secondNumber)
+                document.writeln("są równe");
+            else
+                document.writeln("nie są równe");
+        }
+
+        //Napisz program, który poprosi użytkownika o podanie wieku i sprawdzi, czy osoba jest pełnoletnia. Wyświetl odpowiedni komunikat.
+        function task9()
+        {
+            var wiek;
+            wiek = 21;
+
+            if(wiek >= 18)
+                document.writeln("osoba jest pełnoletnia");
+            else
+                document.writeln("osoba nie jest pełnoletnia");
+        }
+        //Napisz program, który poprosi użytkownika o podanie liczby całkowitej i obliczy jej wartość bezwzględną. Wyświetl wynik.
+        function task10()
+        {
+            var number;
+            number = -15;
+
+            if(number >= 0 )
+                document.writeln("wynik: " + number);
+            if(number < 0)
+                document.writeln("wynik: " + number * (-1))
+
+
+        }
+        //Napisz program, który poprosi użytkownika o podanie liczby od 1 do 7 i wyświetli odpowiadający mu dzień tygodnia.
+        function task11()
+        {
+            var number;
+            number = 5;
+
+            if(number == 1)
+                document.writeln("poniedziałek <br/>");
+            else
+                {
+                    if(number == 2)
+                        document.writeln("wtorek <br>");
+                    else
+                    {
+                        if(number == 3)
+                            document.writeln("środa <br>");
+                        else
+                        {
+                            if(number == 4)
+                                document.writeln("czwartek <br>");
+                            else
+                            {
+                                if(number == 5)
+                                    document.writeln("piątek <br>");
+                                else
+                                {
+                                    if(number == 6)
+                                        document.writeln("sobota <br>");
+                                    else
+                                    {
+                                        if(number == 7)
+                                            document.writeln("niedziela <br>");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+        }
         //task1();
         //task2();
         //task3();
         //task4();
         //task5();
-        task6();
-        
-
+        //task6();
+        //task7();
+        //task8();
+        //task9();
+        //task10();
+        task11();
         
     </script>
 </body>
