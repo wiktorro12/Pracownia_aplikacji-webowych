@@ -8,13 +8,10 @@
 <body>
     <script>
         /*
-            
 
             *. Napisz program, który policzy sumę cyfr podanej przez użytkownika liczby.
 
-            *. Poproś użytkownika o podawanie liczb, aż wprowadzi zero. 
-               Oblicz sumę oraz średnią arytmetyczną wprowadzonych liczb.
-
+          
         */
 
         //Napisz program, który ma pobrać od użytkownika liczbę dodatnią. 
@@ -145,18 +142,70 @@
             } while (upperRange >= currentNumber);
             
         }
-        /*Napisz program, który pobierze liczbę i wyświetli jej cyfry
-            w osobnych linijkach.*/
+
+        //Napisz program, który pobierze liczbę i wyświetli jej cyfry
+        //w osobnych linijkach.
         function task4()
         {
-            var upperRange = parseInt(prompt("Podaj liczbę:"));
+            var number = parseInt(prompt("Podaj liczbę"));
 
+            do
+            {
+                var digit = number % 10;
+                document.write(digit + "<br/>");
+                number = Math.floor(number / 10);
+            } while (number > 0);
+/*
+            125 % 10 => 5 
+            125 / 10 => 12
+            12  % 10 => 2
+            12  / 10 => 1
+            1   % 10 => 1
+            1   / 10 => 0
+*/
+        }
+
+        // Poproś użytkownika o podawanie liczb, aż wprowadzi zero. 
+        //Oblicz sumę oraz średnią arytmetyczną wprowadzonych liczb.
+        function task5()
+        {
+            var number;
+            var sum = 0;
+            var count = 0;
+
+            do
+            {
+                number = parseInt(prompt("Podaj liczbę"));
+                sum = sum + number;
+                count++;
+            } while (number != 0);
+            
+            count--;
+            document.writeln("Suma: " + sum + "<br/>");
+            document.writeln("Średnia: " + sum/count + "<br/>");
+        }
+        // *. Napisz program, który policzy sumę cyfr podanej przez użytkownika liczby.
+        function task6()
+        {
+            var number = parseInt(prompt("Podaj liczbę"));
+            var sum = 0
+            do
+            {
+                var digit = number % 10;
+                sum += digit
+            
+                number = Math.floor(number / 10);
+            } while (number > 0);
+                document.write("suma " + sum );
 
         }
+
         //task1();
         //task2();
         //task3();
-        task4();
+        //task4();
+        //task5();
+        task6();
 
     </script>
 </body>
