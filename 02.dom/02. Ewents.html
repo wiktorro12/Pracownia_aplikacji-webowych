@@ -10,6 +10,13 @@
             var firstDiv = document.getElementById("firstDiv");
             firstDiv.innerText += " NOWY text"
         }
+
+        function task2()
+        {   
+            var inputText = document.getElementById("inputText");                                                                                                                                                                                                                                                                                                                                                                                                                                   
+            var outputDiv = document.getElementById("outputDiv");
+            outputDiv.innerText = inputText.value;
+        }
     </script>
 </head>
 <body>
@@ -17,8 +24,14 @@
 
     <div id="firstDiv">to jest div z zawartością</div>
     <input type="button" value="kliknij mnie" onclick="changeText()" />
-    <script>
-
-    </script>
+    
+    <br/>
+    Podaj dane:
+    <br/>
+    <input type="text" id="inputText" value="ola"/>
+    <br/>
+    <input type="button" value="Pobierz" onxlick="task2()"/>
+    <br/>
+    <div id="outputDiv"></div>
 </body>
 </html>
