@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function calculate()
+        {
+            var NumerKawy = document.getElementById("NumerKawy").value;
+            var Waga = document.getElementById("Waga").value
+            var CenaKawy;
+            if (NumerKawy == 1)
+                CenaKawy = 5;
+            else if (NumerKawy == 2)
+                CenaKawy = 7;
+            else if (NumerKawy == 3)
+                CenaKawy = 6;
+            else CenaKawy = 0;
+            var Wynik = CenaKawy * Waga;
+            
+            document.getElementById("Wynik").innerText = "Koszt zamówienia wynosi: " + Wynik;
+
+            
+        }
+    </script>
+</head>
+<body>
+        podaj numer kawy:
+        <input type="number" id="NumerKawy" value = "1"/>
+        </br>
+        podaj wagę w dekagramach:
+        <input type="number" id="Waga" value = "10"/>
+        </br>
+        <input type="button" value="zamów" onclick="calculate()"/>
+        <p id="Wynik">Koszt zamówienia wynosi:</p>
+    
+</body>
+</html>

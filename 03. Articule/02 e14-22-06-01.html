@@ -8,13 +8,13 @@
         function order()
         {
             var shapeNumber = document.getElementById("shapeNumber").value;
-            var orderValue = "Twoje zamówienie to cukierek";
+            var orderValue = "Twoje zamówienie to cukierek ";
             if (shapeNumber == 1)
                 orderValue = orderValue + "cytryna";
             else if (shapeNumber == 2)
                 orderValue += "liść";
             else if (shapeNumber == 3)
-                 orderValue += "banan";
+                orderValue += "banan";
             else
                 orderValue += "inny";
             document.getElementById("orderResult").innerText = orderValue;
@@ -23,9 +23,8 @@
             var green = document.getElementById("greenId").value;
             var blue = document.getElementById("blueId").value;
 
-
-            var colorRGB = "rgb("+ red +", "+ green +", "+ blue +")";
-            document.getElementById("coloorButton").style.backgroundColor = colorRGB;
+            var colorRGB = "rgb(" + red + ", " + green + ", " + blue + ")";
+            document.getElementById("colorButton").style.backgroundColor = colorRGB;
         }
     </script>
 </head>
@@ -36,13 +35,16 @@
     <br/>
     skomponuj swój kolor, podaj RGB:
     <br/>
-    R: <input type="number" id ="redId"/>
-    G: <input type="number" id ="greenId"/>
-    B: <input type="number" id ="blueId"/>
+    R: <input type="number" id = "redId"/>
+    G: <input type="number" id = "greenId"/>
+    B: <input type="number" id = "blueId"/>
     <br/>
     <input type="button" value="Zamówienie" onclick="order()"/>
     <br/>
     <p id="orderResult">Twoje zamówienie</p>
-    <input type="button" value="Kolor" id="coloorButton" style="background-color: rgb(180, 70, 20);"/>
+    <input type="button" 
+           value="Kolor" 
+           id="colorButton" 
+           style="background-color: rgb(255, 70, 20);"/>
 </body>
 </html>
