@@ -8,35 +8,35 @@
         <link rel="stylesheet" href="styl.css">
         <script>
         function cena() {
-            var suma = 0;
+            var cena = 0
             var Krótkie = document.getElementById("Krótkie");
             var Średnie = document.getElementById("Średnie");
             var Półdługie = document.getElementById("Półdługie");
             var Długie = document.getElementById("Długie");
             
             if (Krótkie.checked) {
-                suma += 25;
+                cena = 25;
             }
             if (Średnie.checked) {
-                suma += 30;
+                cena = 30;
             }
             if (Półdługie.checked) {
-                suma += 40;
+                cena = 40;
             }
             if (Długie.checked) {
-                suma += 50;
+                cena = 50;
             }
-            document.getElementById('wynik').innerHTML = "Cena strzyżenia: " + suma;
+            document.getElementById('wynik').innerHTML = "Cena strzyżenia:" + cena;
         }
         </script>
     </head>
     <body>
         <div id="prawy-dolny">
             <h2>Dziś promocja na strzyżenie włosów</h2>
-            <input type="radio" name="Krótkie" id="Krótkie"> Krótkie<br>
-            <input type="radio" name="Średnie" id="Średnie"> Średnie<br>
-            <input type="radio" name="Półdługie" id="Półdługie"> Półdługie<br>
-            <input type="radio" name="Długie" id="Długie"> Długie<br>
+            <input type="radio"  id="Krótkie"> Krótkie<br>
+            <input type="radio"  id="Średnie"> Średnie<br>
+            <input type="radio"  id="Półdługie"> Półdługie<br>
+            <input type="radio"  id="Długie"> Długie<br>
             <button type="submit" onclick="cena()">Odkryj promocję</button>
             <p id="wynik"></p>
         </div>
