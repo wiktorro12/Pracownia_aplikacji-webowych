@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Całodobowa stacja paliw</title>
+</head>
+<body>
+
+<h1>Całodobowa stacja paliw</h1>
+
+<button onclick="downloadDocuments()">Pobierz dokumenty</button>
+
+<h2>Orientacyjny koszt paliwa</h2>
+
+<label for="rodzaj">Rodzaj paliwa (1-benzyna, 2-olej napędowy):</label><br>
+<input type="text" id="rodzaj" name="rodzaj"><br><br>
+
+<label for="litry">Ile litrów?:</label><br>
+<input type="number" id="litry" name="litry"><br><br>
+
+<button onclick="obliczKoszt()">OBLICZ</button>
+
+<p id="wynik"></p>
+
+<script>
+function goHome() {
+    alert("Przenoszę na stronę główną!");
+}
+
+function downloadDocuments() {
+    alert("Pobieranie dokumentów...");
+}
+
+function obliczKoszt() {
+    const rodzaj = document.getElementById("rodzaj").value;
+    const litry = document.getElementById("litry").value;
+    let cenaZaLitr;
+
+    if (rodzaj == "1") {
+        cenaZaLitr = 6.5; 
+    } else if (rodzaj == "2") {
+        cenaZaLitr = 6.0; 
+    } else {
+        document.getElementById("wynik").innerText = "Błędny rodzaj paliwa!";
+        return;
+    }
+
+    const koszt = cenaZaLitr * litry;
+    document.getElementById("wynik").innerText = "Orientacyjny koszt paliwa: " + koszt.toFixed(2) + " zł";
+}
+</script>
+
+</body>
+</html>
