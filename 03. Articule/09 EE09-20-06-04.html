@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Usługi kosmetyczne</title>
+        <link rel="stylesheet" href="styl.css">
+        <script>
+        function cena() {
+            var suma = 0;
+            var piling = document.getElementById("piling");
+            var maska = document.getElementById("maska");
+            var masaz = document.getElementById("masaz");
+            var regulacja = document.getElementById("regulacja");
+            
+            if (piling.checked) {
+                suma += 45;
+            }
+            if (maska.checked) {
+                suma += 30;
+            }
+            if (masaz.checked) {
+                suma += 20;
+            }
+            if (regulacja.checked) {
+                suma += 5;
+            }
+            document.getElementById('wynik').innerHTML = "Cena zabiegów: " + suma;
+        }
+        </script>
+    </head>
+    <body>
+        <div id="prawy-gora">
+            <h1>Salon Kosmetyczny</h1>
+        </div>
+
+        <div id="prawy-dolny">
+            <h2>Sprawdź cenę swojej wizyty</h2>
+            <input type="checkbox" name="piling" id="piling"> Piling<br>
+            <input type="checkbox" name="maska" id="maska"> Maska<br>
+            <input type="checkbox" name="masaz" id="masaz"> Masaż twarzy<br>
+            <input type="checkbox" name="regulacja" id="regulacja"> Regulacja brwi<br>
+            <button type="submit" onclick="cena()">Sprawdź cenę</button>
+            <p id="wynik"></p>
+        </div>
+    </body>
+</html>

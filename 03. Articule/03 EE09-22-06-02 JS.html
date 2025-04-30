@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+         function kolor()
+         {
+             var h = document.getElementById("liczba").value;
+             var colorHSL = "Hsl("+ h +", 100% , 50% )";
+             document.getElementById("IdkolorGłówny").style.backgroundColor = colorHSL;
+ 
+             colorHSL = "Hsl("+ h +", 80% , 50% )";
+             document.getElementById("Idkolor2").style.backgroundColor = colorHSL;
+ 
+             colorHSL = "Hsl("+ h +", 60% , 50% )";
+             document.getElementById("Idkolor3").style.backgroundColor = colorHSL;
+ 
+             colorHSL = "Hsl("+ h +", 40% , 50% )";
+             document.getElementById("Idkolor4").style.backgroundColor = colorHSL;
+ 
+             colorHSL = "Hsl("+ h +", 20% , 50% )";
+             document.getElementById("Idkolor5").style.backgroundColor = colorHSL;
+         }
+     </script>
+ </head>
+ <body>
+     <input type="number" placeholder="0-360" max="360" id="liczba">
+     <input type="button" value="Generuj paletę" id="paleta" onclick="kolor()">
+     <br/>
+     <br/>
+     <br/>
+     <table>
+         <tr>
+             <th colspan="4" style="background-color: hsl(200, 100%, 50%);" id="IdkolorGłówny" >kolor główny</th>
+         </tr>
+         <tr>
+             <td style="background-color: hsl(200, 80%, 50%);" id="Idkolor2">kolor 2</td>
+             <td style="background-color: hsl(200, 60%, 50%);" id="Idkolor3">kolor 3</td>
+             <td style="background-color: hsl(200, 40%, 50%);" id="Idkolor4">kolor 4</td>
+             <td style="background-color: hsl(200, 20%, 50%);" id="Idkolor5">kolor 5</td>
+         </tr>
+     </table>
+     
+ </body>
+ </html>
