@@ -1,0 +1,20 @@
+.głowa{
+    background-color: rgb(192, 191, 191);
+    height: 50px;
+    text-align: center;
+}
+
+.środek{
+    height: 450px;
+    background-color: rgb(235, 138, 73);
+}
+
+.przedostatni{
+    background-color: rgb(192, 191, 191);
+    height: 300px;
+}
+
+.stopka{
+      height: 120px;
+    background-color: rgb(235, 138, 73);
+}
